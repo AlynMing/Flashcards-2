@@ -15,6 +15,7 @@
 		A4E394C224099EAF00FC884A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E394C024099EAF00FC884A /* LaunchScreen.storyboard */; };
 		A4E394CD24099EAF00FC884A /* FlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E394CC24099EAF00FC884A /* FlashcardsTests.swift */; };
 		A4E394D824099EAF00FC884A /* FlashcardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E394D724099EAF00FC884A /* FlashcardsUITests.swift */; };
+		A4E394E6241239DC00FC884A /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E394E5241239DC00FC884A /* CreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A4E394D324099EAF00FC884A /* FlashcardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E394D724099EAF00FC884A /* FlashcardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsUITests.swift; sourceTree = "<group>"; };
 		A4E394D924099EAF00FC884A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4E394E5241239DC00FC884A /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				A4E394B724099EAE00FC884A /* SceneDelegate.swift */,
 				A4E394B924099EAE00FC884A /* ViewController.swift */,
 				A4E394BB24099EAE00FC884A /* Main.storyboard */,
+				A4E394E5241239DC00FC884A /* CreationViewController.swift */,
 				A4E394BE24099EAF00FC884A /* Assets.xcassets */,
 				A4E394C024099EAF00FC884A /* LaunchScreen.storyboard */,
 				A4E394C324099EAF00FC884A /* Info.plist */,
@@ -262,6 +265,7 @@
 				A4E394BA24099EAE00FC884A /* ViewController.swift in Sources */,
 				A4E394B624099EAE00FC884A /* AppDelegate.swift in Sources */,
 				A4E394B824099EAE00FC884A /* SceneDelegate.swift in Sources */,
+				A4E394E6241239DC00FC884A /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
