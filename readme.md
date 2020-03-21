@@ -1,6 +1,25 @@
 ## Simple Flashcards
 
-📝 `NOTE:` Paste the README templates for each subsequent lab here at the top, (i.e. lab 2, 3, 4). This will show a history of your development process including which users stories you completed and how your app looked and functioned at each step.
+## Lab 4
+
+### App Description
+- Updated Flashcards App with app icon, splash screen, animations for revealing answers and between cards, and new design for cards and buttons.
+
+### App Walk-though
+
+<img src="http://g.recordit.co/SN8blHwxOK.gif" width=200><br>
+
+## Required
+- [X] User should see the app icon 
+- [X] User should see a splash screen
+- [X] User should see an flip animation when revealing the answer
+- [X] User should see a slide animation when going to the next flashcard
+- [X] User should see a slide animation when going to the previous flashcard
+- [X] Push code to GitHub
+## Optional
+- [ ] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
+- [ ] User should see all views properly layout when using the app on a phone of different sizes
+- [ ] Correct answer in multiple choice should be random
 
 ## Lab 3
 

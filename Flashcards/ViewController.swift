@@ -20,9 +20,11 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet weak var card: UIView!
     
     var flashcards = [Flashcard]()
     var currentIndex = 0
+    var isclick = true
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
@@ -49,24 +51,40 @@ class ViewController: UIViewController {
     
     @IBAction func didTapOnNext(_sender: Any) {
         currentIndex = currentIndex + 1
-        updateLabels()
+//        updateLabels()
         updateNextPrevButtons()
+        isclick = true
+        animateCardOut()
     }
+    
     @IBAction func didTapOnPrev(_sender: Any) {
         currentIndex = currentIndex - 1
-        updateLabels()
+//        updateLabels()
         updateNextPrevButtons()
+        isclick = false
+        animateCardOut()
     }
     
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        if frontLabel.isHidden == false {
-            frontLabel.isHidden = true;
-        }
-        else if frontLabel.isHidden == true {
-            frontLabel.isHidden = false;
-        }
+        flipFlashcard()
     }
     
+    func flipFlashcard() {
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            if self.frontLabel.isHidden == false {
+                self.frontLabel.isHidden = true;
+            }
+            else if self.frontLabel.isHidden == true {
+                self.frontLabel.isHidden = false;
+            }
+        })
+//        if frontLabel.isHidden == false {
+//            frontLabel.isHidden = true;
+//        }
+//        else if frontLabel.isHidden == true {
+//            frontLabel.isHidden = false;
+//        }
+    }
     func updateFlashcard(question: String, answer: String) {
         let flashcard = Flashcard(question: question, answer: answer)
 //        frontLabel.text = flashcard.question
@@ -96,6 +114,38 @@ class ViewController: UIViewController {
         }
         else {
             prevButton.isEnabled = true
+        }
+    }
+    
+    func animateCardOut() {
+        if isclick {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+            }, completion: { finished in
+                self.updateLabels()
+                self.animateCardIn() })
+        }
+        else {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+            }, completion: { finished in
+                self.updateLabels()
+                self.animateCardIn() })
+        }
+    }
+    
+    func animateCardIn() {
+        if isclick {
+            card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+            UIView.animate(withDuration: 0.3) {
+                self.card.transform = CGAffineTransform.identity
+            }
+        }
+        else {
+            card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+            UIView.animate(withDuration: 0.3) {
+                self.card.transform = CGAffineTransform.identity
+            }
         }
     }
     
