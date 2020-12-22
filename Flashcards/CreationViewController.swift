@@ -2,6 +2,8 @@
 //  CreationViewController.swift
 //  Flashcards
 //
+//  View Controller for When User is Creating a New Card
+//
 //  Created by Sumi Kolli on 3/5/20.
 //  Copyright © 2020 Sumi Kolli. All rights reserved.
 //
